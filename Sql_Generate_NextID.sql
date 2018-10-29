@@ -1,3 +1,11 @@
+-- =============================================
+-- Author:      Wendy M.
+-- Create date: 9/2018
+-- Description: Generates next title ID based off title count per customer.
+--		If customer has 0 titles, then start from 1
+-- Parameters:	@CustomerID: This will determine what the next ID available is for that customer.
+-- ReturnValue: String TitleID - customer title count plus 1
+-- =============================================
 ALTER FUNCTION [dbo].[AR_udf_GetNextTitleIDByCustomer](@CustomerID int)
 
 RETURNS @Final TABLE(TitleID nvarchar(20))
